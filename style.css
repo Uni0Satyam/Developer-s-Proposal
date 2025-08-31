@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("Screenshot 2025-08-31 175655.png");
+    background-image: linear-gradient(45deg, pink, purple);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+main {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: crimson;
+}
+
+button {
+    font-size: 18px;
+    padding: 12px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#yes {
+    background: linear-gradient(45deg, #56ab2f, #a8e063);
+    color: white;
+}
+
+#yes:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(86, 171, 47, 0.5);
+}
+
+#no {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    color: white;
+    position: relative;
+}
+
+#no:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(255, 65, 108, 0.5);
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 20px;
+    color: purple;
+}
+
+.heart {
+  position: absolute;
+  color: red;
+  font-size: 24px;
+  animation: floatUp 3s ease-in forwards;
+  pointer-events: none; /* hearts won’t block clicks */
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--drift-x), -250px) scale(1.5);
+  }
+}
